@@ -1,40 +1,40 @@
 # author: Thato Semoko
+# Mars Rover class
 require './gps'
 
 class Rover
-  attr_reader :x, :y, :d
+  attr_reader :x, :y, :orientation
   
-  def initialize(x,y, grid)
-    @x, @y = x, y # default positions
-    @d = "N"
+  def initialize(x, y, d, grid)
+    @x, @y, @orientation = x, y, d
     @steer = %w[L R]
-    @gps = GPS.new
+    @gps = GPS.new(d)
     @grid = grid
   end
 
+  # use GPS to turn otherwise continue forward
   def drive(cmd)
-    if @steer.include?(cmd) # turn left or right
-      @d = @gps.turn(cmd)
+    if @steer.include?(cmd)
+      @orientation = @gps.turn(cmd)
     else
-      # move forward
       move
     end
   end
 
   def move
-    case @d
+    case @orientation
     when "N"
-      @y = @y < @grid.y ? @y+1 : @y
+      @y += 1 unless @y == @grid.y
     when "S"
-      @y -= 1
+      @y -= 1 unless @y == 0
     when "E"
-      @x += 1
+      @x += 1 unless @x == @grid.x
     else
-      @x -= 1
+      @x -= 1 unless @x == 0
     end
   end
 
   def to_s
-    "Rover at (#{@x}, #{@y}, #{@d})"
+    "Rover is at #{x} #{y} #{orientation}"
   end
 end
