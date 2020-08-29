@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 require "./plateau"
 require "./rover"
 
@@ -9,18 +11,19 @@ input_data = file_data.readlines.map(&:chomp)
 
 if file_data
   # use first line to setup grid
-  xy = input_data[0].split(" ")
+  xy = input_data[0].chomp.split(" ")
   grid = Plateau.new(xy[0].to_i,xy[1].to_i)
 
   # no of rovers
-  no_rovers = input_data[1..input_data.length].length
+  no_rovers = (input_data.length - 1)
   i = 1
 
-  # FIXME
   while (i < no_rovers)
     # use second line to setup rover initial position
     position = input_data[i].split(" ")
     rover = Rover.new(position[0].to_i,position[1].to_i, position[2], grid)
+
+    # TODO: visualise the rover in the plateau
 
     # setup exploration instructions
     explore_instructions = input_data[i+1].chomp.split('')
@@ -32,10 +35,11 @@ if file_data
 
     # final position
     puts rover.to_s
-    i+=1
+    i+=2
   end
 
   file_data.close
 else
   puts "unable to open file"
 end
+

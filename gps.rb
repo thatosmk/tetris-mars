@@ -11,7 +11,7 @@ class GPS
 
   def turn(direction)
     # turning left means going clockwise on the compass
-    # turning right means going anti-clockwise on the compass
+    #   turning right means going anti-clockwise on the compass
     @orientation_index = direction == "R" ? @orientation_index+1 : @orientation_index-1
 
     # return orientation
