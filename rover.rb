@@ -1,6 +1,6 @@
 # author: Thato Semoko
 # Mars Rover class
-require './gps'
+require_relative './gps'
 
 class Rover
   attr_reader :x, :y, :orientation

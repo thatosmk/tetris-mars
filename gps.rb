@@ -8,9 +8,6 @@ class GPS
     @orientation_index = @orientations.index(d)
   end
 
-  def orientation
-    @orientations[@orientation_index % @orientations.length]
-  end
 
   def turn(direction)
     # turning left means going clockwise on the compass
@@ -21,4 +18,7 @@ class GPS
     orientation
   end
 
+  def orientation
+    @orientations[@orientation_index % @orientations.length]
+  end
 end
