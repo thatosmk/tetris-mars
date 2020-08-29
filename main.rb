@@ -16,6 +16,7 @@ if file_data
   no_rovers = input_data[1..input_data.length].length
   i = 1
 
+  # FIXME
   while (i < no_rovers)
     # use second line to setup rover initial position
     position = input_data[i].split(" ")
@@ -38,4 +39,3 @@ if file_data
 else
   puts "unable to open file"
 end
-
