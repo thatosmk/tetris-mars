@@ -3,9 +3,11 @@ require "./plateau"
 require "./rover"
 
 
-# read a file of input
-filename = "./data/data0.txt"
-input_data = IO.readlines(filename)
+# enter filename
+dir = "./data/"
+print "Enter filename: "
+filename = gets
+input_data = IO.readlines(dir+filename)
 if input_data
   # use first line to setup grid
   xy = input_data[0].chomp.split(" ")

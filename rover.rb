@@ -1,5 +1,5 @@
 # author: Thato Semoko
-# Set up the rover mobile
+# Mars Rover class
 require './gps'
 
 class Rover
@@ -17,7 +17,6 @@ class Rover
     if @steer.include?(cmd)
       @orientation = @gps.turn(cmd)
     else
-      # move forward
       move
     end
   end
@@ -25,13 +24,13 @@ class Rover
   def move
     case @orientation
     when "N"
-      @y += 1
+      @y += 1 unless @y == @grid.y
     when "S"
-      @y -= 1
+      @y -= 1 unless @y == 0
     when "E"
-      @x += 1
+      @x += 1 unless @x == @grid.x
     else
-      @x -= 1
+      @x -= 1 unless @x == 0
     end
   end
 

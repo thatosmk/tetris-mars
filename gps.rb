@@ -6,7 +6,6 @@ class GPS
   def initialize(d)
     @orientations = %w[N E S W] # useful to list them clockwise direction
     @orientation_index = @orientations.index(d)
-    puts @orientation_index
   end
 
   def orientation
