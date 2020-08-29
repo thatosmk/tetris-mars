@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require "./plateau"
+require "./rover"
 
 
 # read a file of input
@@ -10,6 +11,8 @@ if input_data
   xy = input_data[0].split(" ")
   grid = Plateau.new(xy[0],xy[1])
   puts grid.to_s
+  rover = Rover.new(0,1, "N")
+  puts rover.to_s
 else
   puts "unable to open file"
 end

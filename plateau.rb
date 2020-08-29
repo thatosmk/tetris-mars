@@ -11,6 +11,10 @@ class Plateau
     @x
   end
 
+  def direction
+    %[N E S W]
+  end
+
   def y
     @y
   end
