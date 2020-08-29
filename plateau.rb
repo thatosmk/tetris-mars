@@ -2,24 +2,13 @@
 # setup the plateau
 
 class Plateau
+  attr_reader :x, :y
 
   def initialize(x,y)
     @x, @y = x, y
   end
 
-  def x
-    @x
-  end
-
-  def direction
-    %[N E S W]
-  end
-
-  def y
-    @y
-  end
-
   def to_s
-    "(#{@x}, #{@y})"
+    "(#{x}, #{y})"
   end
 end
