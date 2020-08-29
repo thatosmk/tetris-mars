@@ -35,6 +35,6 @@ class Rover
   end
 
   def to_s
-    "Rover is at #{x} #{y} #{orientation}"
+    "#{x} #{y} #{orientation}"
   end
 end
