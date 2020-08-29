@@ -1,6 +1,6 @@
 # author: Thato Semoko
 # Mars Rover class
-require './gps'
+require_relative './gps'
 
 class Rover
   attr_reader :x, :y, :orientation
@@ -35,6 +35,6 @@ class Rover
   end
 
   def to_s
-    "Rover is at #{x} #{y} #{orientation}"
+    "#{x} #{y} #{orientation}"
   end
 end
