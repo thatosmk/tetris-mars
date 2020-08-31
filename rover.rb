@@ -3,9 +3,10 @@
 require_relative './gps'
 
 class Rover
-  attr_reader :x, :y, :orientation
+  attr_reader :id, :x, :y, :orientation
   
-  def initialize(x, y, d, grid)
+  def initialize(i,x, y, d, grid)
+    @id = i
     @x, @y, @orientation = x, y, d
     @steer = %w[L R]
     @gps = GPS.new(d)

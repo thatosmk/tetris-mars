@@ -63,6 +63,39 @@ Make sure you have curl installed, then you run,
 
 ## Visualisation of the conceptual model [Creative extra]
 
+Run the script with any data in ```data``` directory using the ```--visualise``` command-line argument
+```
+  $ ruby main.rb data/data3.txt --visualise
+
+    Initial Position Rover 1
+    -----------
+    ---------+-
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    Final Position
+    ----------+
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    -----------
+    10 10 N
+
+```
+> This feature is not available via remote access version
+
 ## Testing
 
 To run the unit tests, simply
