@@ -34,12 +34,16 @@ Install the dependencies
 
 Then run the script with any data in ```data``` directory.
 ```
-  $ ruby main.rb data/data0.txt
+  $ ruby main.rb data/data3.txt
+
+  10 10 N
 ```
 or make it executable
 ```
   $ chmod +x main.rb
-  $ ./main.rb data/data0.txt
+  $ ./main.rb data/data3.txt
+
+  10 10 N
 ```
 
 ### Accessing it remotely
@@ -49,12 +53,12 @@ or make it executable
 > Kindly allow a few minutes of delay for the Heroku app to boot up.
 Make sure you have curl installed, then you run,
 ```
-  $ curl -X POST -H "Content-Type: multipart/form-data;" --form "data_file=@[link_to_text_file];type=application/text"
-  remote_host 
-```
+  $ curl -X POST -H "Content-Type: multipart/form-data;" --form "data_file=@data/data3.txt;type=application/text"  https://stark-forest-54278.herokuapp.com/
 
-where,
-```remote_host``` is https://stark-forest-54278.herokuapp.com/
+  Rover Final Positions:
+  10 10 N
+
+```
 
 ## Testing
 
