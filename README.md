@@ -69,32 +69,36 @@ Make sure you have curl installed, then you run,
 Run the script with any data in ```data``` directory using the ```--visualise``` command-line argument
 ```
   $ ruby main.rb data/data0.txt --visualise
-
-    Initial Position Rover 1
-    -----------
-    ---------+-
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    Final Position
-    ----------+
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    -----------
-    10 10 N
+    Initial Position of Rover 0
+    ------
+    ------
+    ------
+    ------
+    --+---
+    ------
+    Final Position of Rover 0
+    ------
+    ------
+    ------
+    ------
+    ---+--
+    ------
+    1 3 N
+    Initial Position of Rover 1
+    ------
+    ------
+    ---+--
+    ------
+    ------
+    ------
+    Final Position of Rover 1
+    -+----
+    ------
+    ------
+    ------
+    ------
+    ------
+    5 1 E
 
 ```
 > This feature is not available via remote access version
