@@ -34,16 +34,18 @@ Install the dependencies
 
 Then run the script with any data in ```data``` directory.
 ```
-  $ ruby main.rb data/data3.txt
+  $ ruby main.rb data/data0.txt
 
-  10 10 N
+    1 3 N
+    5 1 E
 ```
 or make it executable
 ```
   $ chmod +x main.rb
-  $ ./main.rb data/data3.txt
+  $ ./main.rb data/data0.txt
 
-  10 10 N
+    1 3 N
+    5 1 E
 ```
 
 ### Accessing it remotely [Creative extra]
@@ -53,10 +55,11 @@ or make it executable
 > Kindly allow a few minutes of delay for the Heroku app to boot up.
 Make sure you have curl installed, then you run,
 ```
-  $ curl -X POST -H "Content-Type: multipart/form-data;" --form "data_file=@data/data3.txt;type=application/text"  https://stark-forest-54278.herokuapp.com/
+  $ curl -X POST -H "Content-Type: multipart/form-data;" --form "data_file=@data/data0.txt;type=application/text"  https://stark-forest-54278.herokuapp.com/
 
   Rover Final Positions:
-  10 10 N
+  1 3 N
+  5 1 E
 
 ```
 
@@ -65,7 +68,7 @@ Make sure you have curl installed, then you run,
 
 Run the script with any data in ```data``` directory using the ```--visualise``` command-line argument
 ```
-  $ ruby main.rb data/data3.txt --visualise
+  $ ruby main.rb data/data0.txt --visualise
 
     Initial Position Rover 1
     -----------

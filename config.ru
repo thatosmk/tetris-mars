@@ -24,10 +24,11 @@ module TetrisMars
 
         no_rovers = (file_data_array.length - 1)
         i = 1
+        rover_id = 0
 
         while (i < no_rovers)
           position = file_data_array[i].split(" ")
-          rover = Rover.new(position[0].to_i,position[1].to_i, position[2], grid)
+          rover = Rover.new(rover_id,position[0].to_i,position[1].to_i, position[2], grid)
 
           # TODO: visualise the rover in the plateau
 
@@ -42,6 +43,7 @@ module TetrisMars
           @results << rover.to_s
           @results << "\n"
           i+=2
+          rover_id+=1
         end
       else
         raise InvalidParams, "You need to provide a data file.\n"
