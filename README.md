@@ -46,7 +46,7 @@ or make it executable
   10 10 N
 ```
 
-### Accessing it remotely
+### Accessing it remotely [Creative extra]
 
 * Using ```curl```
 
@@ -59,6 +59,9 @@ Make sure you have curl installed, then you run,
   10 10 N
 
 ```
+
+
+## Visualisation of the conceptual model [Creative extra]
 
 ## Testing
 

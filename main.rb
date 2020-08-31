@@ -22,7 +22,9 @@ if file_data
     position = input_data[i].split(" ")
     rover = Rover.new(position[0].to_i,position[1].to_i, position[2], grid)
 
-    # TODO: visualise the rover in the plateau
+    # visualise the rover in the plateau
+    puts "Initial Position Rover #{i}"
+    grid.visualise(rover.x, rover.y)
 
     # setup exploration instructions
     explore_instructions = input_data[i+1].chomp.split('')
@@ -31,6 +33,9 @@ if file_data
     for instruction in explore_instructions do
       rover.drive(instruction)
     end
+
+    puts "Final Position"
+    grid.visualise(rover.x, rover.y)
 
     # final position
     puts rover.to_s
