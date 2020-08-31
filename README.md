@@ -24,6 +24,8 @@ You must have **Ruby 2.5.1** or latest installed.
 
 ## Getting started 
 
+### Accessing it locally
+
 Install the dependencies
 
 ```
@@ -39,6 +41,20 @@ or make it executable
   $ chmod +x main.rb
   $ ./main.rb data/data0.txt
 ```
+
+### Accessing it remotely
+
+* Using ```curl```
+
+> Kindly allow a few minutes of delay for the Heroku app to boot up.
+Make sure you have curl installed, then you run,
+```
+  $ curl -X POST -H "Content-Type: multipart/form-data;" --form "data_file=@[link_to_text_file];type=application/text"
+  remote_host 
+```
+
+where,
+```remote_host``` is https://stark-forest-54278.herokuapp.com/
 
 ## Testing
 

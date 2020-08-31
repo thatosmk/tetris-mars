@@ -3,7 +3,6 @@
 require "./plateau"
 require "./rover"
 
-
 # enter filename
 file_data = File.open(ARGV[0])
 
@@ -42,4 +41,3 @@ if file_data
 else
   puts "unable to open file"
 end
-
