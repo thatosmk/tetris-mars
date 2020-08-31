@@ -2,11 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.4.4)
-    json (2.3.1)
     rack (2.2.3)
-    rack-multipart_related (1.0.0)
-      json (>= 1.0)
-      rack (>= 1.0)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -26,7 +22,6 @@ PLATFORMS
 
 DEPENDENCIES
   rack
-  rack-multipart_related
   rspec
 
 BUNDLED WITH
